@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="shXX1F 的 GitHub Pages 个人主页，展示项目、技能和联系方式。">
+    <meta name="theme-color" content="#f7f4ee">
+    <meta property="og:title" content="shXX1F | Portfolio">
+    <meta property="og:description" content="个人主页与项目作品集。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-workspace.png">
+    <title>shXX1F | Portfolio</title>
+    <link rel="preload" href="assets/hero-workspace.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="shXX1F home">
+        <span class="brand-mark">S</span>
+        <span>shXX1F</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects">项目</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-workspace.png" alt="">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Developer / Builder / GitHub Pages</p>
+          <h1 id="hero-title">shXX1F</h1>
+          <p class="hero-copy">
+            我在这里整理自己的项目、实验和正在打磨的小工具。页面会优先展示 GitHub 上的公开仓库，也可以作为简历、作品集和项目入口使用。
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
+              <i data-lucide="github" aria-hidden="true"></i>
+              GitHub
+            </a>
+            <a class="button secondary" href="#projects">
+              <i data-lucide="folder-kanban" aria-hidden="true"></i>
+              查看项目
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-stats" aria-label="Highlights">
+        <div>
+          <strong>GitHub</strong>
+          <span>@shXX1F</span>
+        </div>
+        <div>
+          <strong>Focus</strong>
+          <span>Web / Tools / Experiments</span>
+        </div>
+        <div>
+          <strong>Status</strong>
+          <span>Building in public</span>
+        </div>
+      </section>
+
+      <section class="section intro" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">把想法做成能运行的东西。</h2>
+        </div>
+        <div class="intro-grid">
+          <p>
+            这是 shXX1F 的个人主页模板。它适合展示开源项目、课程作品、Web 应用、自动化脚本、数据可视化或任何你想公开分享的作品。
+          </p>
+          <p>
+            页面保持纯静态，可以直接部署到 GitHub Pages。项目区会尝试读取你的公开仓库；如果读取失败，会展示本地备用项目卡。
+          </p>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-title">项目作品</h2>
+          </div>
+          <a class="text-link" href="https://github.com/shXX1F?tab=repositories" target="_blank" rel="noreferrer">
+            全部仓库
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="project-grid" id="project-grid" aria-live="polite">
+          <article class="project-card skeleton" aria-hidden="true"></article>
+          <article class="project-card skeleton" aria-hidden="true"></article>
+          <article class="project-card skeleton" aria-hidden="true"></article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">想看我的代码或项目进展，可以从 GitHub 开始。</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
+            <i data-lucide="github" aria-hidden="true"></i>
+            GitHub Profile
+          </a>
+          <a class="button secondary" href="https://github.com/shXX1F?tab=repositories" target="_blank" rel="noreferrer">
+            <i data-lucide="archive" aria-hidden="true"></i>
+            Repositories
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> shXX1F</span>
+      <span>Built for GitHub Pages</span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
