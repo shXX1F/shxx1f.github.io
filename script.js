@@ -3,16 +3,6 @@ const pagesRepo = `${username.toLowerCase()}.github.io`;
 
 const fallbackProjects = [
   {
-    name: "personal-homepage",
-    description: "用于展示个人介绍、项目入口和 GitHub 资料的静态主页。",
-    language: "HTML",
-    stars: 0,
-    forks: 0,
-    html_url: `https://github.com/${username}/${pagesRepo}`,
-    homepage: "",
-    updated_at: new Date().toISOString()
-  },
-  {
     name: "web-toolkit",
     description: "可替换为你做过的 Web 小工具、课程作品或完整应用。",
     language: "JavaScript",
@@ -108,7 +98,10 @@ async function loadProjects() {
     }
 
     const repos = await response.json();
-    const ownRepos = repos.filter((repo) => !repo.fork).slice(0, 6);
+    const ownRepos = repos
+      .filter((repo) => !repo.fork)
+      .filter((repo) => repo.name.toLowerCase() !== pagesRepo)
+      .slice(0, 6);
     renderProjects(ownRepos.length > 0 ? ownRepos : fallbackProjects);
   } catch (error) {
     renderProjects(fallbackProjects);
