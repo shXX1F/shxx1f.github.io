@@ -12,7 +12,7 @@ const fallbackProjects = [
     updated_at: "2025-03-01"
   },
   {
-    name: "AI+区块链智能政务监察平台",
+    name: "基于AI+区块链的双引擎驱动的智能投融资平台",
     description: "面向实时数据分析与动态风险预警需求，参与平台设计、需求预测、部分技术实现和研究报告撰写。",
     language: "AI / Blockchain",
     stargazers_count: 0,
