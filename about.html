@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="shXX1F 的关于与联系页面，包含个人简介、技能关键词和联系方式。">
-    <meta name="theme-color" content="#f4f6f2">
+    <meta name="theme-color" content="#f5f6f8">
     <meta property="og:title" content="shXX1F | 关于联系">
     <meta property="og:description" content="电子信息、AI 图像识别、AIGC 工具链与项目实践。">
     <meta property="og:type" content="website">
@@ -13,110 +13,103 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="站点页眉">
-      <a class="brand" href="index.html" aria-label="shXX1F 首页">
-        <span class="brand-mark">S</span>
-        <span>shXX1F</span>
-      </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="index.html">首页</a>
-        <a href="resume.html">简历</a>
-        <a href="works.html">个人作品</a>
-        <a href="journey.html">人生历程</a>
-        <a class="is-active" href="about.html">关于联系</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="page-hero about-hero" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">About</p>
-          <h1 id="about-title">关于联系</h1>
-          <p>
-            我关注电子信息、智能系统和 AI 应用落地，喜欢把算法、仿真、可视化和内容表达串成完整项目。
-          </p>
-        </div>
-        <a class="button primary" href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
-          <i data-lucide="github" aria-hidden="true"></i>
-          GitHub Profile
+    <div class="site-shell">
+      <aside class="left-rail" aria-label="个人导航">
+        <a class="profile-block" href="index.html">
+          <span class="avatar-ring"><span class="avatar-core">S</span></span>
+          <strong>shXX1F</strong>
+          <small>Electronic Information / AI</small>
         </a>
-      </section>
+        <nav class="rail-nav" aria-label="主导航">
+          <a href="index.html"><i data-lucide="home" aria-hidden="true"></i><span>首页</span></a>
+          <a href="resume.html"><i data-lucide="file-user" aria-hidden="true"></i><span>简历</span></a>
+          <a href="works.html"><i data-lucide="folder-kanban" aria-hidden="true"></i><span>作品</span></a>
+          <a href="journey.html"><i data-lucide="route" aria-hidden="true"></i><span>历程</span></a>
+          <a class="is-active" href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>关于</span></a>
+          <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <i data-lucide="moon" aria-hidden="true"></i>
+          <span>Dark Mode</span>
+        </button>
+      </aside>
 
-      <section class="section about-layout" aria-labelledby="profile-title">
-        <div class="profile-panel">
-          <img src="assets/hero-workspace.png" alt="桌面工作区">
-        </div>
-        <div class="profile-copy">
-          <p class="eyebrow">Profile</p>
-          <h2 id="profile-title">电子信息背景下的 AI 与工程实践探索者。</h2>
-          <p>
-            本科阶段在北京邮电大学学习，后续将在北京航空航天大学继续深造。项目经验覆盖图像识别、智能网联汽车、智能投融资平台和救援机器人。
-          </p>
-          <div class="tag-row" aria-label="个人关键词">
-            <span>PyTorch</span>
-            <span>Mask R-CNN</span>
-            <span>Python</span>
-            <span>MATLAB</span>
-            <span>STM32</span>
-            <span>AIGC</span>
-            <span>Streamlit</span>
+      <main class="content-column">
+        <header class="welcome-card">
+          <i data-lucide="user-round" aria-hidden="true"></i>
+          <span>About / <strong>Contact</strong></span>
+        </header>
+
+        <article class="post-card hero-post" data-search-card>
+          <img class="post-image" src="assets/hero-workspace.png" alt="桌面工作区">
+          <div class="post-body">
+            <div class="pill-row">
+              <span>About</span>
+              <span>Contact</span>
+            </div>
+            <h1>关于联系</h1>
+            <p>我关注电子信息、智能系统和 AI 应用落地，喜欢把算法、仿真、可视化和内容表达串成完整项目。</p>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <section class="section skill-overview" aria-labelledby="skills-title">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2 id="skills-title">能力关键词</h2>
-        </div>
-        <div class="focus-grid">
-          <article class="focus-card">
+        <section class="card-grid three">
+          <article class="mini-card" data-search-card>
             <i data-lucide="code-2" aria-hidden="true"></i>
-            <h3>编程与工程</h3>
-            <p>掌握 MATLAB，具备 Python、Java 编程基础，了解 STM32 嵌入式开发。</p>
+            <h2>编程与工程</h2>
+            <p>MATLAB、Python、Java、STM32 嵌入式开发基础。</p>
           </article>
-          <article class="focus-card">
+          <article class="mini-card" data-search-card>
             <i data-lucide="brain-circuit" aria-hidden="true"></i>
-            <h3>AI 与视觉</h3>
-            <p>参与过基于 PyTorch Mask R-CNN 的图像实例分割、数据处理和可视化系统开发。</p>
+            <h2>AI 与视觉</h2>
+            <p>PyTorch、Mask R-CNN、图像分割、数据处理和可视化。</p>
           </article>
-          <article class="focus-card">
+          <article class="mini-card" data-search-card>
             <i data-lucide="wand-sparkles" aria-hidden="true"></i>
-            <h3>AIGC 与表达</h3>
-            <p>熟悉 AIGC 工具链，具备 Prompt 调优、素材管理、视频生成和成果可视化经验。</p>
+            <h2>AIGC</h2>
+            <p>Prompt 调优、素材管理、AI 视频生成和成果可视化。</p>
           </article>
-        </div>
-      </section>
+        </section>
 
-      <section class="section contact-list" aria-labelledby="contact-list-title">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-list-title">联系方式</h2>
-        </div>
-        <div class="link-list">
-          <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
-            <i data-lucide="github" aria-hidden="true"></i>
-            <span>GitHub</span>
-            <small>github.com/shXX1F</small>
-          </a>
-          <a href="resume.html">
-            <i data-lucide="file-user" aria-hidden="true"></i>
-            <span>个人简历</span>
-            <small>查看教育、实习、项目与奖项</small>
-          </a>
-          <a href="works.html">
-            <i data-lucide="folder-kanban" aria-hidden="true"></i>
-            <span>个人作品</span>
-            <small>查看项目与公开仓库</small>
-          </a>
-        </div>
-      </section>
-    </main>
+        <section class="resume-block" data-search-card>
+          <h2>联系方式</h2>
+          <div class="contact-grid">
+            <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
+              <i data-lucide="github" aria-hidden="true"></i>
+              <span>GitHub</span>
+              <small>github.com/shXX1F</small>
+            </a>
+            <a href="resume.html">
+              <i data-lucide="file-user" aria-hidden="true"></i>
+              <span>在线简历</span>
+              <small>教育、实习、项目与奖项</small>
+            </a>
+            <a href="works.html">
+              <i data-lucide="folder-kanban" aria-hidden="true"></i>
+              <span>个人作品</span>
+              <small>项目与公开仓库</small>
+            </a>
+          </div>
+        </section>
+      </main>
 
-    <footer class="site-footer">
-      <span>&copy; <span data-year></span> shXX1F</span>
-      <span><a href="index.html">返回首页</a></span>
-    </footer>
+      <aside class="right-rail" aria-label="站点信息">
+        <label class="search-card">
+          <span>Search</span>
+          <input type="search" placeholder="Type something..." data-site-search>
+          <i data-lucide="search" aria-hidden="true"></i>
+        </label>
+        <section class="side-widget tags-widget">
+          <h2><i data-lucide="tag" aria-hidden="true"></i> Tags</h2>
+          <div class="tag-cloud">
+            <a href="#">PyTorch</a>
+            <a href="#">Mask R-CNN</a>
+            <a href="#">Python</a>
+            <a href="#">AIGC</a>
+            <a href="#">MATLAB</a>
+          </div>
+        </section>
+      </aside>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>

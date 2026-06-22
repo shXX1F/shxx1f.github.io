@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="shXX1F 的人生历程页面，用时间线记录教育、项目、竞赛和实习经历。">
-    <meta name="theme-color" content="#f4f6f2">
+    <meta name="theme-color" content="#f5f6f8">
     <meta property="og:title" content="shXX1F | 人生历程">
     <meta property="og:description" content="从北邮本科到北航硕士，从竞赛项目到图像识别实习。">
     <meta property="og:type" content="website">
@@ -13,82 +13,85 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="站点页眉">
-      <a class="brand" href="index.html" aria-label="shXX1F 首页">
-        <span class="brand-mark">S</span>
-        <span>shXX1F</span>
-      </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="index.html">首页</a>
-        <a href="resume.html">简历</a>
-        <a href="works.html">个人作品</a>
-        <a class="is-active" href="journey.html">人生历程</a>
-        <a href="about.html">关于联系</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="page-hero journey-hero" aria-labelledby="journey-title">
-        <div>
-          <p class="eyebrow">Journey</p>
-          <h1 id="journey-title">人生历程</h1>
-          <p>
-            用时间线把本科、竞赛、实习与研究生阶段串起来，让经历不只是一份简历，也是一条清晰的成长路径。
-          </p>
-        </div>
-        <a class="button secondary" href="resume.html">
-          <i data-lucide="file-user" aria-hidden="true"></i>
-          完整简历
+    <div class="site-shell">
+      <aside class="left-rail" aria-label="个人导航">
+        <a class="profile-block" href="index.html">
+          <span class="avatar-ring"><span class="avatar-core">S</span></span>
+          <strong>shXX1F</strong>
+          <small>Electronic Information / AI</small>
         </a>
-      </section>
+        <nav class="rail-nav" aria-label="主导航">
+          <a href="index.html"><i data-lucide="home" aria-hidden="true"></i><span>首页</span></a>
+          <a href="resume.html"><i data-lucide="file-user" aria-hidden="true"></i><span>简历</span></a>
+          <a href="works.html"><i data-lucide="folder-kanban" aria-hidden="true"></i><span>作品</span></a>
+          <a class="is-active" href="journey.html"><i data-lucide="route" aria-hidden="true"></i><span>历程</span></a>
+          <a href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>关于</span></a>
+          <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <i data-lucide="moon" aria-hidden="true"></i>
+          <span>Dark Mode</span>
+        </button>
+      </aside>
 
-      <section class="section timeline-section" aria-labelledby="timeline-title">
-        <div class="section-heading">
-          <p class="eyebrow">Timeline</p>
-          <h2 id="timeline-title">成长记录</h2>
-        </div>
-        <ol class="timeline">
-          <li>
+      <main class="content-column">
+        <header class="welcome-card">
+          <i data-lucide="route" aria-hidden="true"></i>
+          <span>Journey / <strong>Timeline</strong></span>
+        </header>
+
+        <article class="page-title-card" data-search-card>
+          <div class="pill-row">
+            <span>Timeline</span>
+            <span>Growth</span>
+          </div>
+          <h1>人生历程</h1>
+          <p>用时间线把本科、竞赛、实习与研究生阶段串起来，让经历不只是一份简历，也是一条清晰的成长路径。</p>
+        </article>
+
+        <section class="journey-list">
+          <article data-search-card>
             <time>2022.09 - 2026.06</time>
-            <div>
-              <h3>北京邮电大学本科</h3>
-              <p>综合成绩 90.49，排名前 10%。学习程序设计、微处理器设计、通信原理、信号与系统、数字信号处理等课程。</p>
-            </div>
-          </li>
-          <li>
+            <h2>北京邮电大学本科</h2>
+            <p>电信工程及管理专业，综合成绩 90.49，排名前 10%。学习程序设计、通信原理、信号与系统、数字信号处理等课程。</p>
+          </article>
+          <article data-search-card>
+            <time>2023.01 - 2023.05</time>
+            <h2>智能政务监察平台项目</h2>
+            <p>参与“AI+区块链”双引擎平台，围绕实时数据分析、风险预警和治理决策流程重构展开实践。</p>
+          </article>
+          <article data-search-card>
             <time>2024.11 - 2025.06</time>
-            <div>
-              <h3>竞赛项目集中推进</h3>
-              <p>完成智能网联汽车仿真和水面救援机器人项目，积累 Python 仿真、CFD 分析、3D 建模与工程汇报经验。</p>
-            </div>
-          </li>
-          <li>
+            <h2>竞赛项目集中推进</h2>
+            <p>完成智能网联汽车仿真和水面救援机器人项目，积累 Python 仿真、CFD 分析、3D 建模与工程汇报经验。</p>
+          </article>
+          <article data-search-card>
             <time>2026.05 - 2026.09</time>
-            <div>
-              <h3>图像识别实习</h3>
-              <p>在中关村人工智能研究院参与金属纳米 SEM 图像识别系统，围绕 Mask R-CNN、数据处理、参数计算和 Streamlit 可视化开展工作。</p>
-            </div>
-          </li>
-          <li>
+            <h2>图像识别实习</h2>
+            <p>在中关村人工智能研究院参与金属纳米 SEM 图像识别系统，围绕 Mask R-CNN、数据处理、参数计算和 Streamlit 可视化开展工作。</p>
+          </article>
+          <article data-search-card>
             <time>2026.09 - 2029.06</time>
-            <div>
-              <h3>北京航空航天大学硕士</h3>
-              <p>继续深入电子信息、智能感知和工程系统相关能力。</p>
-            </div>
-          </li>
-        </ol>
-      </section>
+            <h2>北京航空航天大学硕士</h2>
+            <p>电子科学与技术方向，继续深入电子信息、智能感知和工程系统相关能力。</p>
+          </article>
+        </section>
+      </main>
 
-      <section class="section quote-band" aria-labelledby="direction-title">
-        <p class="eyebrow">Direction</p>
-        <h2 id="direction-title">从课程基础到工程项目，再到研究方向。</h2>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>&copy; <span data-year></span> shXX1F</span>
-      <span><a href="works.html">查看作品</a></span>
-    </footer>
+      <aside class="right-rail" aria-label="站点信息">
+        <label class="search-card">
+          <span>Search</span>
+          <input type="search" placeholder="Type something..." data-site-search>
+          <i data-lucide="search" aria-hidden="true"></i>
+        </label>
+        <section class="side-widget">
+          <h2><i data-lucide="archive" aria-hidden="true"></i> Archives</h2>
+          <a href="#"><strong>2026</strong><span>3</span></a>
+          <a href="#"><strong>2025</strong><span>2</span></a>
+          <a href="#"><strong>2023</strong><span>1</span></a>
+        </section>
+      </aside>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="shXX1F 的个人主页，展示教育背景、实习经历、项目作品、竞赛奖项和联系方式。">
-    <meta name="theme-color" content="#f4f6f2">
-    <meta property="og:title" content="shXX1F | 个人主页">
-    <meta property="og:description" content="电子信息与 AI 方向的个人作品、简历与成长记录。">
+    <meta name="description" content="shXX1F 的个人主页，展示电子信息、AI 项目、简历和成长记录。">
+    <meta name="theme-color" content="#f5f6f8">
+    <meta property="og:title" content="shXX1F | Portfolio">
+    <meta property="og:description" content="电子信息与 AI 方向的个人主页。">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/hero-workspace.png">
     <title>shXX1F | 首页</title>
@@ -14,135 +14,127 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="站点页眉">
-      <a class="brand" href="index.html" aria-label="shXX1F 首页">
-        <span class="brand-mark">S</span>
-        <span>shXX1F</span>
-      </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a class="is-active" href="index.html">首页</a>
-        <a href="resume.html">简历</a>
-        <a href="works.html">个人作品</a>
-        <a href="journey.html">人生历程</a>
-        <a href="about.html">关于联系</a>
-      </nav>
-    </header>
+    <div class="site-shell">
+      <aside class="left-rail" aria-label="个人导航">
+        <a class="profile-block" href="index.html">
+          <span class="avatar-ring"><span class="avatar-core">S</span></span>
+          <strong>shXX1F</strong>
+          <small>Electronic Information / AI</small>
+        </a>
+        <nav class="rail-nav" aria-label="主导航">
+          <a class="is-active" href="index.html"><i data-lucide="home" aria-hidden="true"></i><span>首页</span></a>
+          <a href="resume.html"><i data-lucide="file-user" aria-hidden="true"></i><span>简历</span></a>
+          <a href="works.html"><i data-lucide="folder-kanban" aria-hidden="true"></i><span>作品</span></a>
+          <a href="journey.html"><i data-lucide="route" aria-hidden="true"></i><span>历程</span></a>
+          <a href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>关于</span></a>
+          <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <i data-lucide="moon" aria-hidden="true"></i>
+          <span>Dark Mode</span>
+        </button>
+      </aside>
 
-    <main>
-      <section class="hero home-hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img src="assets/hero-workspace.png" alt="">
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Electronic Information / AI / Builder</p>
-          <h1 id="hero-title">shXX1F</h1>
-          <p class="hero-copy">
-            北京邮电大学本科，北京航空航天大学硕士。关注图像识别、智能系统、AIGC 工具链与工程实践。
-          </p>
-          <div class="hero-actions" aria-label="主要操作">
-            <a class="button primary" href="resume.html">
-              <i data-lucide="file-user" aria-hidden="true"></i>
-              查看简历
-            </a>
-            <a class="button secondary" href="works.html">
-              <i data-lucide="folder-kanban" aria-hidden="true"></i>
-              项目作品
-            </a>
+      <main class="content-column">
+        <header class="welcome-card">
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+          <span>Welcome To <strong>shXX1F's Portfolio</strong></span>
+        </header>
+
+        <article class="post-card hero-post" data-search-card>
+          <img class="post-image" src="assets/hero-workspace.png" alt="桌面工作区">
+          <div class="post-body">
+            <div class="pill-row">
+              <span>Profile</span>
+              <span>AI</span>
+              <span>Electronic Information</span>
+            </div>
+            <h1>从电子信息到 AI 工程实践</h1>
+            <p>
+              北京邮电大学电信工程及管理本科，拟赴北京航空航天大学攻读电子科学与技术硕士。关注图像识别、智能系统、AIGC 工具链与工程实践。
+            </p>
+            <div class="post-meta">
+              <span><i data-lucide="calendar-days" aria-hidden="true"></i> 2026</span>
+              <span><i data-lucide="clock-3" aria-hidden="true"></i> 3 minute read</span>
+            </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <section class="section intro" aria-labelledby="intro-title">
-        <div class="section-heading">
-          <p class="eyebrow">Profile</p>
-          <h2 id="intro-title">把电子信息基础、AI 能力和真实项目连接起来。</h2>
-        </div>
-        <div class="intro-grid">
-          <p>
-            本科综合成绩 90.49，排名前 10%，通过 CET-4 559、CET-6 493。课程基础覆盖程序设计、微处理器、通信原理、信号系统、数字信号处理等方向。
-          </p>
-          <p>
-            经历过图像识别实习、智能网联汽车仿真、AI+区块链平台、水面救援机器人等项目，重视从建模、算法、仿真到可视化展示的完整闭环。
-          </p>
-        </div>
-      </section>
-
-      <section class="section stat-section" aria-labelledby="stats-title">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Highlights</p>
-            <h2 id="stats-title">简历亮点</h2>
-          </div>
-          <a class="text-link" href="resume.html">
-            完整简历
-            <i data-lucide="arrow-right" aria-hidden="true"></i>
+        <section class="card-grid two">
+          <a class="mini-card" href="resume.html" data-search-card>
+            <i data-lucide="file-user" aria-hidden="true"></i>
+            <h2>在线简历</h2>
+            <p>教育背景、图像识别实习、项目经历、奖项荣誉和专业技能。</p>
           </a>
-        </div>
-        <div class="stat-grid">
-          <article class="stat-card">
+          <a class="mini-card" href="works.html" data-search-card>
+            <i data-lucide="folder-kanban" aria-hidden="true"></i>
+            <h2>项目作品</h2>
+            <p>智能网联汽车、AI+区块链平台、水面救援机器人和 GitHub 项目。</p>
+          </a>
+        </section>
+
+        <article class="post-card split-post" data-search-card>
+          <div class="post-body">
+            <div class="pill-row">
+              <span>Internship</span>
+              <span>Computer Vision</span>
+            </div>
+            <h2>图像识别实习：从模型到可视化系统</h2>
+            <p>
+              在中关村人工智能研究院参与金属纳米 SEM 图像识别系统，围绕 PyTorch Mask R-CNN、数据处理、参数计算和 Streamlit 可视化开展工作。
+            </p>
+            <a class="inline-link" href="resume.html">查看简历<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <section class="stat-strip">
+          <article>
             <strong>90.49</strong>
             <span>综合成绩，前 10%</span>
           </article>
-          <article class="stat-card">
+          <article>
             <strong>6+</strong>
-            <span>竞赛奖项与奖学金记录</span>
+            <span>竞赛奖项与奖学金</span>
           </article>
-          <article class="stat-card">
-            <strong>2026</strong>
-            <span>中关村人工智能研究院图像识别实习</span>
+          <article>
+            <strong>CET-6</strong>
+            <span>英语六级 493</span>
           </article>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      <section class="section feature-links" aria-labelledby="sections-title">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Explore</p>
-            <h2 id="sections-title">从这些页面了解我。</h2>
+      <aside class="right-rail" aria-label="站点信息">
+        <label class="search-card">
+          <span>Search</span>
+          <input type="search" placeholder="Type something..." data-site-search>
+          <i data-lucide="search" aria-hidden="true"></i>
+        </label>
+        <section class="side-widget">
+          <h2><i data-lucide="archive" aria-hidden="true"></i> Archives</h2>
+          <a href="journey.html"><strong>2026</strong><span>3</span></a>
+          <a href="works.html"><strong>2025</strong><span>4</span></a>
+          <a href="resume.html"><strong>2024</strong><span>2</span></a>
+        </section>
+        <section class="side-widget tags-widget">
+          <h2><i data-lucide="hash" aria-hidden="true"></i> Categories</h2>
+          <div class="tag-cloud">
+            <a href="works.html">AI</a>
+            <a href="works.html">Computer Vision</a>
+            <a href="works.html">Signal Processing</a>
+            <a href="resume.html">Resume</a>
           </div>
-        </div>
-        <div class="feature-grid">
-          <a class="feature-card" href="resume.html">
-            <i data-lucide="file-user" aria-hidden="true"></i>
-            <span>简历</span>
-            <p>完整展示教育背景、实习经历、奖项荣誉和专业技能。</p>
-          </a>
-          <a class="feature-card" href="works.html">
-            <i data-lucide="sparkles" aria-hidden="true"></i>
-            <span>个人作品</span>
-            <p>集中展示竞赛项目、工程实践、GitHub 仓库和长期更新作品。</p>
-          </a>
-          <a class="feature-card" href="journey.html">
-            <i data-lucide="route" aria-hidden="true"></i>
-            <span>人生历程</span>
-            <p>用时间线整理本科、实习、竞赛和研究生阶段的成长路径。</p>
-          </a>
-        </div>
-      </section>
-
-      <section class="section contact-band" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">想看代码或项目进展，可以从 GitHub 开始。</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="button primary" href="https://github.com/shXX1F" target="_blank" rel="noreferrer">
-            <i data-lucide="github" aria-hidden="true"></i>
-            GitHub
-          </a>
-          <a class="button secondary" href="about.html">
-            <i data-lucide="user-round" aria-hidden="true"></i>
-            关于联系
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>&copy; <span data-year></span> shXX1F</span>
-      <span>Built for GitHub Pages</span>
-    </footer>
+        </section>
+        <section class="side-widget tags-widget">
+          <h2><i data-lucide="tag" aria-hidden="true"></i> Tags</h2>
+          <div class="tag-cloud">
+            <a href="works.html">PyTorch</a>
+            <a href="works.html">Python</a>
+            <a href="about.html">AIGC</a>
+            <a href="resume.html">MATLAB</a>
+          </div>
+        </section>
+      </aside>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>

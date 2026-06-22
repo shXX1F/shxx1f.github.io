@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="shXX1F 的个人作品页面，展示竞赛项目、工程实践和 GitHub 项目。">
-    <meta name="theme-color" content="#f4f6f2">
+    <meta name="theme-color" content="#f5f6f8">
     <meta property="og:title" content="shXX1F | 个人作品">
     <meta property="og:description" content="智能网联汽车、AI+区块链平台、水面救援机器人与 GitHub 项目。">
     <meta property="og:type" content="website">
@@ -13,103 +13,108 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="站点页眉">
-      <a class="brand" href="index.html" aria-label="shXX1F 首页">
-        <span class="brand-mark">S</span>
-        <span>shXX1F</span>
-      </a>
-      <nav class="site-nav" aria-label="主导航">
-        <a href="index.html">首页</a>
-        <a href="resume.html">简历</a>
-        <a class="is-active" href="works.html">个人作品</a>
-        <a href="journey.html">人生历程</a>
-        <a href="about.html">关于联系</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="page-hero" aria-labelledby="works-title">
-        <div>
-          <p class="eyebrow">Works</p>
-          <h1 id="works-title">个人作品</h1>
-          <p>
-            这里整理我在竞赛、课程和实习中参与的项目，重点展示问题定义、技术路径和最终成果。
-          </p>
-        </div>
-        <a class="button primary" href="https://github.com/shXX1F?tab=repositories" target="_blank" rel="noreferrer">
-          <i data-lucide="github" aria-hidden="true"></i>
-          GitHub 仓库
+    <div class="site-shell">
+      <aside class="left-rail" aria-label="个人导航">
+        <a class="profile-block" href="index.html">
+          <span class="avatar-ring"><span class="avatar-core">S</span></span>
+          <strong>shXX1F</strong>
+          <small>Electronic Information / AI</small>
         </a>
-      </section>
+        <nav class="rail-nav" aria-label="主导航">
+          <a href="index.html"><i data-lucide="home" aria-hidden="true"></i><span>首页</span></a>
+          <a href="resume.html"><i data-lucide="file-user" aria-hidden="true"></i><span>简历</span></a>
+          <a class="is-active" href="works.html"><i data-lucide="folder-kanban" aria-hidden="true"></i><span>作品</span></a>
+          <a href="journey.html"><i data-lucide="route" aria-hidden="true"></i><span>历程</span></a>
+          <a href="about.html"><i data-lucide="user-round" aria-hidden="true"></i><span>关于</span></a>
+          <a href="https://github.com/shXX1F" target="_blank" rel="noreferrer"><i data-lucide="github" aria-hidden="true"></i><span>GitHub</span></a>
+        </nav>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <i data-lucide="moon" aria-hidden="true"></i>
+          <span>Dark Mode</span>
+        </button>
+      </aside>
 
-      <section class="section work-focus" aria-labelledby="focus-title">
-        <div class="section-heading">
-          <p class="eyebrow">Project Focus</p>
-          <h2 id="focus-title">主要项目方向</h2>
-        </div>
-        <div class="case-grid">
-          <article class="case-card">
-            <div class="case-meta">
-              <span>2024.11 - 2025.03</span>
-              <span>Python / 仿真</span>
-            </div>
-            <h3>基于 Python 的智能网联汽车设计</h3>
-            <p>
-              在仿真平台开发动态换线决策与博弈算法，负责 ADA 场景和连续变道场景的代码开发、仿真测试与多场景验证。
-            </p>
-            <p class="result">成果：中国大学生工程实践与创新能力大赛省级二等奖。</p>
-          </article>
-          <article class="case-card">
-            <div class="case-meta">
-              <span>2023.01 - 2023.05</span>
-              <span>AI / 区块链</span>
-            </div>
-            <h3>“AI+区块链”双引擎智能政务监察平台</h3>
-            <p>
-              面向投资经办实时数据分析与动态风险预警需求，参与市场调研、需求预测、部分技术实现和项目研究报告撰写。
-            </p>
-            <p class="result">成果：中国大学生计算机设计大赛省级二等奖。</p>
-          </article>
-          <article class="case-card">
-            <div class="case-meta">
-              <span>2024.12 - 2025.06</span>
-              <span>CFD / 3D 建模</span>
-            </div>
-            <h3>轻量化仿生式水面救援机器人</h3>
-            <p>
-              参与救援机器人平台设计，负责产品 3D 建模，并使用 CFD 工具围绕流场、阻力分布和推进效率进行仿真分析。
-            </p>
-            <p class="result">成果：中国大学生服务外包创新创业大赛国赛组三等奖。</p>
-          </article>
-        </div>
-      </section>
+      <main class="content-column">
+        <header class="welcome-card">
+          <i data-lucide="folder-kanban" aria-hidden="true"></i>
+          <span>Works / <strong>Projects</strong></span>
+        </header>
 
-      <section class="section projects-section" aria-labelledby="repo-title">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Repositories</p>
-            <h2 id="repo-title">GitHub 项目</h2>
+        <article class="post-card hero-post" data-search-card>
+          <img class="post-image" src="assets/hero-workspace.png" alt="项目展示背景">
+          <div class="post-body">
+            <div class="pill-row">
+              <span>Project</span>
+              <span>Engineering</span>
+            </div>
+            <h1>个人作品</h1>
+            <p>整理我在竞赛、课程和实习中参与的项目，重点展示问题定义、技术路径和最终成果。</p>
           </div>
-          <a class="text-link" href="https://github.com/shXX1F?tab=repositories" target="_blank" rel="noreferrer">
-            全部仓库
-            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div class="project-grid" data-project-grid data-project-limit="9" aria-live="polite">
-          <article class="project-card skeleton" aria-hidden="true"></article>
-          <article class="project-card skeleton" aria-hidden="true"></article>
-          <article class="project-card skeleton" aria-hidden="true"></article>
-          <article class="project-card skeleton" aria-hidden="true"></article>
-          <article class="project-card skeleton" aria-hidden="true"></article>
-          <article class="project-card skeleton" aria-hidden="true"></article>
-        </div>
-      </section>
-    </main>
+        </article>
 
-    <footer class="site-footer">
-      <span>&copy; <span data-year></span> shXX1F</span>
-      <span><a href="resume.html">查看简历</a></span>
-    </footer>
+        <section class="project-feed">
+          <article class="project-entry" data-search-card>
+            <div class="entry-side"><time>2024.11 - 2025.03</time><span>Python / 仿真</span></div>
+            <div>
+              <h2>基于 Python 的智能网联汽车设计</h2>
+              <p>在仿真平台开发动态换线决策与博弈算法，负责 ADA 场景和连续变道场景代码开发、仿真测试与多场景验证。</p>
+              <strong>中国大学生工程实践与创新能力大赛省级二等奖</strong>
+            </div>
+          </article>
+          <article class="project-entry" data-search-card>
+            <div class="entry-side"><time>2023.01 - 2023.05</time><span>AI / 区块链</span></div>
+            <div>
+              <h2>“AI+区块链”双引擎智能政务监察平台</h2>
+              <p>面向实时数据分析与动态风险预警需求，参与市场调研、需求预测、部分技术实现和项目研究报告撰写。</p>
+              <strong>中国大学生计算机设计大赛省级二等奖</strong>
+            </div>
+          </article>
+          <article class="project-entry" data-search-card>
+            <div class="entry-side"><time>2024.12 - 2025.06</time><span>CFD / 3D 建模</span></div>
+            <div>
+              <h2>轻量化仿生式水面救援机器人</h2>
+              <p>参与救援机器人平台设计，负责产品 3D 建模，并使用 CFD 工具围绕流场、阻力分布和推进效率进行仿真分析。</p>
+              <strong>中国大学生服务外包创新创业大赛国赛组三等奖</strong>
+            </div>
+          </article>
+        </section>
+
+        <section class="resume-block">
+          <div class="block-heading">
+            <h2>GitHub 项目</h2>
+            <a class="inline-link" href="https://github.com/shXX1F?tab=repositories" target="_blank" rel="noreferrer">全部仓库<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="project-grid" data-project-grid data-project-limit="6" aria-live="polite">
+            <article class="repo-card skeleton" aria-hidden="true"></article>
+            <article class="repo-card skeleton" aria-hidden="true"></article>
+            <article class="repo-card skeleton" aria-hidden="true"></article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="right-rail" aria-label="站点信息">
+        <label class="search-card">
+          <span>Search</span>
+          <input type="search" placeholder="Type something..." data-site-search>
+          <i data-lucide="search" aria-hidden="true"></i>
+        </label>
+        <section class="side-widget tags-widget">
+          <h2><i data-lucide="hash" aria-hidden="true"></i> Categories</h2>
+          <div class="tag-cloud">
+            <a href="#">Python</a>
+            <a href="#">AI</a>
+            <a href="#">CFD</a>
+            <a href="#">AIGC</a>
+          </div>
+        </section>
+        <section class="side-widget">
+          <h2><i data-lucide="archive" aria-hidden="true"></i> Project Years</h2>
+          <a href="#"><strong>2025</strong><span>2</span></a>
+          <a href="#"><strong>2024</strong><span>1</span></a>
+          <a href="#"><strong>2023</strong><span>1</span></a>
+        </section>
+      </aside>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>

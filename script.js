@@ -12,7 +12,7 @@ const fallbackProjects = [
     updated_at: "2025-03-01"
   },
   {
-    name: "基于AI+区块链的双引擎驱动的智能投融资平台",
+    name: "AI+区块链智能政务监察平台",
     description: "面向实时数据分析与动态风险预警需求，参与平台设计、需求预测、部分技术实现和研究报告撰写。",
     language: "AI / Blockchain",
     stargazers_count: 0,
@@ -34,10 +34,8 @@ const fallbackProjects = [
 ];
 
 const projectGrids = [...document.querySelectorAll("[data-project-grid]")];
-
-document.querySelectorAll("[data-year]").forEach((element) => {
-  element.textContent = new Date().getFullYear();
-});
+const searchInput = document.querySelector("[data-site-search]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -74,7 +72,7 @@ function projectCard(project) {
   const forks = project.forks_count ?? project.forks ?? 0;
 
   return `
-    <article class="project-card">
+    <article class="project-card" data-search-card>
       <div>
         <h3>${escapeHtml(project.name)}</h3>
         <p>${escapeHtml(description)}</p>
@@ -148,5 +146,34 @@ async function loadProjects() {
   }
 }
 
+function setupSearch() {
+  if (!searchInput) return;
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll("[data-search-card]").forEach((card) => {
+      const isMatch = card.textContent.toLowerCase().includes(query);
+      card.classList.toggle("is-hidden-by-search", query.length > 0 && !isMatch);
+    });
+  });
+}
+
+function setupTheme() {
+  const storedTheme = window.localStorage.getItem("theme");
+
+  if (storedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  if (!themeToggle) return;
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    window.localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  });
+}
+
+setupTheme();
+setupSearch();
 loadProjects();
 refreshIcons();
