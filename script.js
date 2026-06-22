@@ -2,34 +2,34 @@ const username = "shXX1F";
 
 const fallbackProjects = [
   {
-    name: "个人主页多页面版",
-    description: "把个人主页拆成首页、个人作品、人生历程和关于联系几个页面，方便长期更新。",
-    language: "HTML",
-    stargazers_count: 0,
-    forks_count: 0,
-    html_url: `https://github.com/${username}/${username.toLowerCase()}.github.io`,
-    homepage: `https://${username.toLowerCase()}.github.io/`,
-    updated_at: new Date().toISOString()
-  },
-  {
-    name: "Web 作品集",
-    description: "可以替换成课程页面、前端练习、交互小作品或其他已经完成的项目。",
-    language: "JavaScript",
+    name: "基于 Python 的智能网联汽车设计",
+    description: "在仿真平台开发动态换线决策与博弈算法，负责 ADA 场景和连续变道场景代码开发与仿真测试。",
+    language: "Python",
     stargazers_count: 0,
     forks_count: 0,
     html_url: `https://github.com/${username}`,
     homepage: "",
-    updated_at: new Date().toISOString()
+    updated_at: "2025-03-01"
   },
   {
-    name: "学习实验记录",
-    description: "用来整理学习过程中的实验、笔记、脚本和阶段性成果。",
-    language: "Project",
+    name: "AI+区块链智能政务监察平台",
+    description: "面向实时数据分析与动态风险预警需求，参与平台设计、需求预测、部分技术实现和研究报告撰写。",
+    language: "AI / Blockchain",
     stargazers_count: 0,
     forks_count: 0,
-    html_url: `https://github.com/${username}?tab=repositories`,
+    html_url: `https://github.com/${username}`,
     homepage: "",
-    updated_at: new Date().toISOString()
+    updated_at: "2023-05-01"
+  },
+  {
+    name: "轻量化仿生式水面救援机器人",
+    description: "负责 3D 建模与 CFD 仿真，围绕流场、阻力分布和推进效率进行分析，为结构优化提供依据。",
+    language: "CFD",
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: `https://github.com/${username}`,
+    homepage: "",
+    updated_at: "2025-06-01"
   }
 ];
 
