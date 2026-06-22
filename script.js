@@ -1,70 +1,98 @@
 const username = "shXX1F";
-const pagesRepo = `${username.toLowerCase()}.github.io`;
 
 const fallbackProjects = [
   {
-    name: "web-toolkit",
-    description: "可替换为你做过的 Web 小工具、课程作品或完整应用。",
+    name: "个人主页多页面版",
+    description: "把个人主页拆成首页、个人作品、人生历程和关于联系几个页面，方便长期更新。",
+    language: "HTML",
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: `https://github.com/${username}/${username.toLowerCase()}.github.io`,
+    homepage: `https://${username.toLowerCase()}.github.io/`,
+    updated_at: new Date().toISOString()
+  },
+  {
+    name: "Web 作品集",
+    description: "可以替换成课程页面、前端练习、交互小作品或其他已经完成的项目。",
     language: "JavaScript",
-    stars: 0,
-    forks: 0,
+    stargazers_count: 0,
+    forks_count: 0,
     html_url: `https://github.com/${username}`,
     homepage: "",
     updated_at: new Date().toISOString()
   },
   {
-    name: "automation-lab",
-    description: "可替换为自动化脚本、数据处理项目或 AI 实验项目。",
-    language: "Python",
-    stars: 0,
-    forks: 0,
-    html_url: `https://github.com/${username}`,
+    name: "学习实验记录",
+    description: "用来整理学习过程中的实验、笔记、脚本和阶段性成果。",
+    language: "Project",
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: `https://github.com/${username}?tab=repositories`,
     homepage: "",
     updated_at: new Date().toISOString()
   }
 ];
 
-const grid = document.querySelector("#project-grid");
-const year = document.querySelector("#year");
+const projectGrids = [...document.querySelectorAll("[data-project-grid]")];
 
-year.textContent = new Date().getFullYear();
+document.querySelectorAll("[data-year]").forEach((element) => {
+  element.textContent = new Date().getFullYear();
+});
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
 function formatDate(value) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "最近";
+  }
+
   return new Intl.DateTimeFormat("zh-CN", {
     year: "numeric",
     month: "short"
-  }).format(new Date(value));
+  }).format(date);
 }
 
 function metaItem(value) {
-  return value ? `<span>${value}</span>` : "";
+  return value ? `<span>${escapeHtml(value)}</span>` : "";
 }
 
 function projectCard(project) {
-  const description = project.description || "这个项目暂时还没有描述。";
+  const description = project.description || "这个项目暂时还没有描述，可以稍后补充项目目标、技术栈和完成情况。";
   const language = project.language || "Project";
+  const repoUrl = project.html_url || `https://github.com/${username}`;
   const liveUrl = project.homepage && project.homepage.startsWith("http") ? project.homepage : "";
+  const stars = project.stargazers_count ?? project.stars ?? 0;
+  const forks = project.forks_count ?? project.forks ?? 0;
 
   return `
     <article class="project-card">
       <div>
-        <h3>${project.name}</h3>
-        <p>${description}</p>
-        <div class="project-meta" aria-label="Project metadata">
+        <h3>${escapeHtml(project.name)}</h3>
+        <p>${escapeHtml(description)}</p>
+        <div class="project-meta" aria-label="项目元信息">
           ${metaItem(language)}
-          ${metaItem(`${project.stargazers_count ?? project.stars ?? 0} stars`)}
-          ${metaItem(`${project.forks_count ?? project.forks ?? 0} forks`)}
+          ${metaItem(`${stars} stars`)}
+          ${metaItem(`${forks} forks`)}
           ${metaItem(`更新于 ${formatDate(project.updated_at)}`)}
         </div>
       </div>
       <div class="project-links">
-        <a href="${project.html_url}" target="_blank" rel="noreferrer">
+        <a href="${escapeHtml(repoUrl)}" target="_blank" rel="noreferrer">
           <i data-lucide="github" aria-hidden="true"></i>
           Repo
         </a>
         ${
           liveUrl
-            ? `<a href="${liveUrl}" target="_blank" rel="noreferrer">
+            ? `<a href="${escapeHtml(liveUrl)}" target="_blank" rel="noreferrer">
                 <i data-lucide="external-link" aria-hidden="true"></i>
                 Live
               </a>`
@@ -75,17 +103,30 @@ function projectCard(project) {
   `;
 }
 
-function renderProjects(projects) {
-  grid.innerHTML = projects.map(projectCard).join("");
+function refreshIcons() {
   if (window.lucide) {
     window.lucide.createIcons();
   }
 }
 
+function renderProjects(projects) {
+  projectGrids.forEach((grid) => {
+    const limit = Number.parseInt(grid.dataset.projectLimit || "6", 10);
+    grid.innerHTML = projects.slice(0, limit).map(projectCard).join("");
+  });
+
+  refreshIcons();
+}
+
 async function loadProjects() {
-  const endpoint = `https://api.github.com/users/${username}/repos?sort=updated&per_page=9`;
+  if (projectGrids.length === 0) {
+    refreshIcons();
+    return;
+  }
+
+  const endpoint = `https://api.github.com/users/${username}/repos?sort=updated&per_page=12`;
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 2500);
+  const timeout = window.setTimeout(() => controller.abort(), 2600);
 
   try {
     const response = await fetch(endpoint, {
@@ -98,10 +139,7 @@ async function loadProjects() {
     }
 
     const repos = await response.json();
-    const ownRepos = repos
-      .filter((repo) => !repo.fork)
-      .filter((repo) => repo.name.toLowerCase() !== pagesRepo)
-      .slice(0, 6);
+    const ownRepos = repos.filter((repo) => !repo.fork);
     renderProjects(ownRepos.length > 0 ? ownRepos : fallbackProjects);
   } catch (error) {
     renderProjects(fallbackProjects);
@@ -111,7 +149,4 @@ async function loadProjects() {
 }
 
 loadProjects();
-
-if (window.lucide) {
-  window.lucide.createIcons();
-}
+refreshIcons();

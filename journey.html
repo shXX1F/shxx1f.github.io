@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="shXX1F 的人生历程页面，用时间线记录学习、成长和计划。">
+    <meta name="theme-color" content="#f4f6f2">
+    <meta property="og:title" content="shXX1F | 人生历程">
+    <meta property="og:description" content="用时间线整理学习节点、成长阶段和未来计划。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hero-workspace.png">
+    <title>shXX1F | 人生历程</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="站点页眉">
+      <a class="brand" href="index.html" aria-label="shXX1F 首页">
+        <span class="brand-mark">S</span>
+        <span>shXX1F</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="works.html">个人作品</a>
+        <a class="is-active" href="journey.html">人生历程</a>
+        <a href="about.html">关于联系</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero journey-hero" aria-labelledby="journey-title">
+        <div>
+          <p class="eyebrow">Journey</p>
+          <h1 id="journey-title">人生历程</h1>
+          <p>
+            用时间线记录重要节点：什么时候开始学习，做过什么尝试，哪些事情改变了自己的方向。
+          </p>
+        </div>
+        <a class="button secondary" href="about.html">
+          <i data-lucide="user-round" aria-hidden="true"></i>
+          关于我
+        </a>
+      </section>
+
+      <section class="section timeline-section" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Timeline</p>
+          <h2 id="timeline-title">成长记录</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <time>起点</time>
+            <div>
+              <h3>开始接触编程和网页</h3>
+              <p>从基础语法、页面结构和简单交互开始，逐渐把想法做成能打开、能操作的页面。</p>
+            </div>
+          </li>
+          <li>
+            <time>探索</time>
+            <div>
+              <h3>尝试不同类型的项目</h3>
+              <p>通过课程练习、小工具和个人页面积累经验，找到自己更感兴趣的方向。</p>
+            </div>
+          </li>
+          <li>
+            <time>现在</time>
+            <div>
+              <h3>整理作品和个人主页</h3>
+              <p>把内容拆成更清楚的多页面结构，方便展示项目，也方便以后继续更新。</p>
+            </div>
+          </li>
+          <li>
+            <time>下一步</time>
+            <div>
+              <h3>持续打磨代表作品</h3>
+              <p>补充真实项目截图、技术说明和阶段总结，让个人主页变成长期成长档案。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section quote-band" aria-labelledby="direction-title">
+        <p class="eyebrow">Direction</p>
+        <h2 id="direction-title">把经历写下来，下一次选择方向时就有依据。</h2>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span data-year></span> shXX1F</span>
+      <span><a href="works.html">查看作品</a></span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
