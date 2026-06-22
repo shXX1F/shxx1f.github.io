@@ -33,7 +33,7 @@ http://127.0.0.1:4173/
 5. Branch 选择 `main`，目录选择 `/root`
 6. 等待 GitHub Pages 完成部署
 
-部署后的地址通常是：
+部署后的地址：
 
 ```text
 https://shxx1f.github.io/
